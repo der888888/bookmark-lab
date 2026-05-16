@@ -1,0 +1,23 @@
+{
+  "name": "bookmark-server",
+  "version": "1.0.0",
+  "description": "Practice backend server for a bookmark app",
+  "homepage": "https://github.com/der888888/bookmark-lab#readme",
+  "bugs": {
+    "url": "https://github.com/der888888/bookmark-lab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/der888888/bookmark-lab.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
