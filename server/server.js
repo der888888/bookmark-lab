@@ -34,6 +34,13 @@ app.get('/bookmarks',(req,res)=>{
     
 })
 
+//get bookmark by id
+app.get('/bookmarks/:id',(req,res)=>{
+    //해당 id를 갖고 있는 bookmark 상세정보 조회
+    res.json(bookmarks[req.params.id-1])
+    //CURRENT: mockdata
+})
+
 //post bookmark
 // app.post('/bookmarks',(req,res)=>{
 //     //db에 새로운 bookmark를 추가한다.
@@ -49,12 +56,6 @@ app.get('/bookmarks',(req,res)=>{
 // //delete bookmark
 // app.delete('/bookmarks/:id',(req,res)=>{
 //     //bookmark를 삭제한다.
-//     //CURRENT: mockdata
-// })
-
-// //get bookmark by id
-// app.get('/bookmarks/:id',(req,res)=>{
-//     //해당 id를 갖고 있는 bookmark 상세정보 조회
 //     //CURRENT: mockdata
 // })
 
