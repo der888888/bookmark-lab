@@ -42,10 +42,12 @@ app.get('/bookmarks/:id',(req,res)=>{
 })
 
 //post bookmark
-// app.post('/bookmarks',(req,res)=>{
-//     //db에 새로운 bookmark를 추가한다.
-//     //CURRENT: mockdata
-// })
+app.post('/bookmarks',(req,res)=>{
+    //db에 새로운 bookmark를 추가한다.
+    bookmarks.push(req.body)
+    res.json(bookmarks)
+    //CURRENT: mockdata
+})
 
 // //update bookmark
 // app.put('/bookmarks/:id',(req,res)=>{
