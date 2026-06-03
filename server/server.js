@@ -50,10 +50,16 @@ app.post('/bookmarks',(req,res)=>{
 })
 
 // //update bookmark
-// app.put('/bookmarks/:id',(req,res)=>{
-//     //bookmark를 수정한다.
-//     //CURRENT: mockdata
-// })
+app.put('/bookmarks/:id',(req,res)=>{
+    //bookmark를 수정한다.
+    bookmarks[req.params.id-1]={
+        id:req.query.id,
+        title:req.query.title,
+        url:req.query.url
+    }
+    res.json(bookmarks)
+    //CURRENT: mockdata
+})
 
 // //delete bookmark
 // app.delete('/bookmarks/:id',(req,res)=>{
