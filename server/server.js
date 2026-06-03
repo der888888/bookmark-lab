@@ -62,10 +62,12 @@ app.put('/bookmarks/:id',(req,res)=>{
 })
 
 // //delete bookmark
-// app.delete('/bookmarks/:id',(req,res)=>{
-//     //bookmark를 삭제한다.
-//     //CURRENT: mockdata
-// })
+app.delete('/bookmarks/:id',(req,res)=>{
+    //bookmark를 삭제한다.
+    bookmarks.splice(req.params.id-1,1)
+    res.json(bookmarks)
+    //CURRENT: mockdata
+})
 
 app.listen(port,()=>{
     console.log(`Example app listening on port ${port}`)//콘솔에 해당 로그를 띄운다.
